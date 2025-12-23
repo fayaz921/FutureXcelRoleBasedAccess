@@ -1,0 +1,6 @@
+@FutureXcelRoleBasedAccess_HostAddress = http://localhost:5137
+
+GET {{FutureXcelRoleBasedAccess_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
