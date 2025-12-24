@@ -17,6 +17,9 @@ builder.Services.AddControllers();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 
+// Add HttpClient for API calls
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://localhost:7067") });
+
 // Configure JWT Authentication
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
